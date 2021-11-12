@@ -1,0 +1,75 @@
+﻿
+@model IEnumerable<WebElReyCan.Models.Mascota>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td></td>
+            <td>
+                @using (Html.BeginForm("Create", "Mascota", FormMethod.Get))
+                {
+                    <input type="submit" value="Crear Nuevo Turno" />
+                }
+            </td>
+        </tr>
+        <tr>
+           
+            <td>
+                @using (Html.BeginForm("Index", "Mascota", FormMethod.Get))
+                {
+                    <input type="submit" value="Traer Todas" />
+                }
+            </td>
+        </tr>
+
+    </table>
+    <table>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Fecha)</th>
+            <th>@Html.DisplayNameFor(model => model.Hora)</th>
+            <th>@Html.DisplayNameFor(model => model.NombreMascota)</th>
+            <th>@Html.DisplayNameFor(model => model.Raza)</th>
+            <th>@Html.DisplayNameFor(model => model.Edad)</th>
+            <th>@Html.DisplayNameFor(model => model.NombreDueño)</th>
+            <th>@Html.DisplayNameFor(model => model.Celular)</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        @foreach (var item in Model)
+        {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Fecha)</td>
+        <td>@Html.DisplayFor(modelItem => item.Hora)</td>
+        <td>@Html.DisplayFor(modelItem => item.NombreMascota)</td>
+        <td>@Html.DisplayFor(modelItem => item.Raza)</td>
+        <td>@Html.DisplayFor(modelItem => item.Edad)</td>
+        <td>@Html.DisplayFor(modelItem => item.NombreDueño)</td>
+        <td>@Html.DisplayFor(modelItem => item.Celular)</td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id })
+        </td>
+
+    </tr>
+
+
+        }
+    </table>
+    @section sidebar {
+        <h2>Como cuidar el pelo de tu mascota</h2>
+        <p>Cepillar de manera regular, con el cepillo idóneo y en el momento adecuado </p>
+        <p>Bañar acorde al pelo de cada perro </p>
+
+    }
+
+</body>
+</html>

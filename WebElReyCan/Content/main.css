@@ -1,0 +1,70 @@
+﻿* {
+    text-decoration: none;
+    font-family: Arial, Arial, Helvetica, sans-serif;
+}
+
+body {
+    /*width: 750px;*/
+    width: 100%;
+    height: 760px;
+}
+header {
+    height: 250px;
+    display: grid;
+    grid-gap: 10px;
+    /*grid-template-columns: 500px 220px;*/
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 120px 120px;
+    /*width: 730px;*/
+    margin: 10px 10px 5px 10px;
+}
+.banner {
+    background-image: url(../Image/perro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.logo {
+    background-image: url(../Image/logoperro.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login {
+    background-color: lightcyan;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.7em;
+}
+
+nav {
+    display: flex;
+    height: 50px;
+    background-color: chocolate;
+    margin: 0px 10px 0px 10px;
+    justify-content: right;
+    align-items: center;
+}
+main {
+    display: flex;
+    margin: 5px 10px 5px 10px;
+    height: 400px;
+}
+.left {
+    background-color: lightblue;
+    width: 20%;
+    margin-right: 10px;
+}
+.article {
+    background-color: lightgoldenrodyellow;
+    width:80%;
+}
+footer {
+    display: flex;
+    /*width: 730px;*/
+    margin: 0px 10px 5px 10px;
+    height: 50px;
+    background-color: green;
+    justify-content: center;
+    text-align: center;
+}

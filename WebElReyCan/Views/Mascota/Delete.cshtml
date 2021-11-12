@@ -1,0 +1,68 @@
+﻿@model WebElReyCan.Models.Mascota
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h2> Eliminar Mascota</h2>
+    @using (Html.BeginForm("Delete", "Mascota", FormMethod.Post))
+    {
+        <fieldset>
+            <legend>Detalle</legend>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Fecha)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.Fecha)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Hora)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.Hora)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.NombreMascota)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.NombreMascota)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Raza)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.Raza)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Edad)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.Edad)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.NombreDueño)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.NombreDueño)
+            </div>
+            <div class="display-label">
+                @Html.DisplayNameFor(model => model.Celular)
+            </div>
+            <div class=" display-text">
+                @Html.DisplayFor(model => model.Celular)
+            </div>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="Delete" />
+        </p>
+    }
+    <p>
+        @Html.ActionLink("Back to List", "Index", "Mascota")
+    </p>
+</body>
+</html>

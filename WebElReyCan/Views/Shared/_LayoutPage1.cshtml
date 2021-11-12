@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/main.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <section class="banner"></section>
+        <section class="logo"></section>
+        <section class="login">
+            <h3>Login</h3>
+            <div>
+                <label>Nombre</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Email</label> <input type="email">
+            </div>
+            <br>
+            <button class="btn">
+                Enviar
+            </button>
+
+        </section>
+    </header>
+    <nav>
+        <div>
+            @Html.ActionLink("Inicio", "Index", "Home") | 
+        </div>
+
+        <div>
+            @Html.ActionLink("Turnos", "Index", "Mascota")
+        </div>
+    </nav>
+    <main>
+        <aside class="left">
+            @if (IsSectionDefined("sidebar"))
+            {
+                @RenderSection("sideBar")
+            }
+            else
+            {               
+                    <h2>Peluqueros recomendados:</h2>
+                <ul>
+                    <li><a href="https://es.wikipedia.org/wiki/Peluquero_canino">El arte de la peluquería</a></li>
+                </ul>
+            }
+        </aside>
+        <article class="article">
+            @RenderBody()
+        </article>
+
+    </main>
+    <footer>
+        elreycan@email.com
+    </footer>
+
+
+</body>
+</html>
