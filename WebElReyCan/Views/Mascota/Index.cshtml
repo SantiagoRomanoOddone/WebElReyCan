@@ -34,6 +34,18 @@
         <tr>
 
             <td>
+                @using (Html.BeginForm("TraerPorCelular", "Mascota", FormMethod.Get))
+                {
+                    @Html.Label("Numero Celular:")
+                    @Html.TextBox("celular", null)
+
+                    <input type="submit" value="Get" />
+                }
+            </td>
+        </tr>
+        <tr>
+
+            <td>
                 @using (Html.BeginForm("Index", "Mascota", FormMethod.Get))
                 {
                     <input type="submit" value="Traer Todas" />

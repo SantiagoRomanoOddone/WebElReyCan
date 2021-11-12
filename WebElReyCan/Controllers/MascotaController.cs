@@ -104,6 +104,19 @@ namespace WebElReyCan.Controllers
                 select o).ToList();
             return View("Index", mascotas);
         }
+        public ActionResult TraerPorCelular(string celular)
+        {
+            if (celular == null)
+            {
+                return RedirectToAction("Index");
+            }
+            List<Mascota> mascotas = (
+                from o in context.Mascotas
+                where o.Celular == celular
+                select o).ToList();
+            return View("Index", mascotas);
+        }
+
 
 
 
