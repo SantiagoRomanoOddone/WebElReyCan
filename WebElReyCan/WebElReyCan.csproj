@@ -112,6 +112,10 @@
     <Compile Include="Migrations\202111121313564_initial.Designer.cs">
       <DependentUpon>202111121313564_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111121649060_initial1.cs" />
+    <Compile Include="Migrations\202111121649060_initial1.Designer.cs">
+      <DependentUpon>202111121649060_initial1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Mascota.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,6 +152,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111121313564_initial.resx">
       <DependentUpon>202111121313564_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111121649060_initial1.resx">
+      <DependentUpon>202111121649060_initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

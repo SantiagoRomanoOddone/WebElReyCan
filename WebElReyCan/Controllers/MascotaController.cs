@@ -17,16 +17,16 @@ namespace WebElReyCan.Controllers
             var mascotas = context.Mascotas.ToList();
             return View("Index", mascotas);
         }
-        //public ActionResult Index()
-        //{
-        //    string hoy = DateTime.Now.Day.ToString() + "/" + DateTime.Now.Month.ToString() + "/" + DateTime.Now.Year.ToString();
-        //    var turnos = (from t in context.Mascotas
-        //                  where Convert.ToString(t.Fecha) == hoy
-        //                  select t).ToList();
+        public ActionResult Turnos()
+        {
+            DateTime fechaHoy = DateTime.Today;
 
-        //    return View("Index", turnos);
-        //}
+            List<Mascota> mascotasHoy = (from t in context.Mascotas
+                                     where t.Fecha == fechaHoy
+                                     select t).ToList();
 
+            return View("Index", mascotasHoy);
+        }
         public ActionResult Create()
         {
             Mascota mascota = new Mascota();
@@ -91,6 +91,7 @@ namespace WebElReyCan.Controllers
             }
             return View("Edit", mascota);
         }
+        
         public ActionResult SearchByName(string nombreMascota)
         {
             if (nombreMascota == null)

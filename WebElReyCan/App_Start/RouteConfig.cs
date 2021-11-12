@@ -13,6 +13,12 @@ namespace WebElReyCan
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "nombre",
+            //    url: "Mascota/TraerNombre/{nombreMascota}",
+            //    defaults: new { controller = "Mascota", action = "SearchByName" });
+
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

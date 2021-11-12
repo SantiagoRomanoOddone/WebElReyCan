@@ -18,8 +18,10 @@ namespace WebElReyCan.Models
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
         public DateTime Fecha { get; set; }
 
-        //[Column(TypeName = "time")]
-        //[DisplayFormat(DataFormatString = "{hh:mm}")]
+        
+
+        [DisplayFormat(DataFormatString = "{0:HH:mm}")]
+        [Column(TypeName = "varchar")]
         public string Hora { get; set; }
         [Required(ErrorMessage = "Campo Requerido.")]
         [StringLength(50)]

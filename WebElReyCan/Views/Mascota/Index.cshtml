@@ -20,11 +20,32 @@
             </td>
         </tr>
         <tr>
-           
+
+            <td>
+                @using (Html.BeginForm("SearchByName", "Mascota", FormMethod.Get))
+                {
+                    @Html.Label("Nombre Mascota:")
+                    @Html.TextBox("nombreMascota", null)
+
+                    <input type="submit" value="Get" />
+                }
+            </td>
+        </tr>
+        <tr>
+
             <td>
                 @using (Html.BeginForm("Index", "Mascota", FormMethod.Get))
                 {
                     <input type="submit" value="Traer Todas" />
+                }
+            </td>
+        </tr>
+        <tr>
+
+            <td>
+                @using (Html.BeginForm("Turnos", "Mascota", FormMethod.Get))
+                {
+                    <input type="submit" value="Ver turnos de hoy" />
                 }
             </td>
         </tr>
