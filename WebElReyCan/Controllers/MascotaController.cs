@@ -102,7 +102,11 @@ namespace WebElReyCan.Controllers
                 from o in context.Mascotas
                 where o.NombreMascota == nombreMascota
                 select o).ToList();
-            return View("Index", nombreMascota);
+            return View("Index", mascotas);
         }
+
+
+
+
     }
 }
